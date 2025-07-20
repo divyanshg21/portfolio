@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Divyansh Gupta - Software Engineer</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative min-h-screen">
+    <div class="relative max-w-4xl mx-auto px-4 py-8 z-10">
+        <!-- Header is now sticky -->
+        <header class="sticky top-0 z-20 bg-[var(--background-color)] flex items-center justify-between py-4 border-b border-[var(--secondary-color)]">
+            <div class="flex items-center gap-2">
+                <span class="text-[var(--terminal-green)] text-xl font-bold">~</span>
+                <h2 class="text-[var(--text-primary)] font-bold text-lg">/home/divyansh</h2>
+            </div>
+            <nav class="flex items-center gap-6 text-sm">
+                <a class="nav-link" href="#about">./about.sh</a>
+                <a class="nav-link" href="#skills">./skills.sh</a>
+                <a class="nav-link" href="#experience">./experience.sh</a>
+                <a class="nav-link" href="#projects">./projects.sh</a>
+                <a class="nav-link" href="#contact">./contact.sh</a>
+            </nav>
+        </header>
+
+        <main class="mt-8">
+            <h1 class="text-3xl font-bold text-[var(--text-primary)] mb-2">Hi, I'm Divyansh,</h1>
+            <p class="text-[var(--text-secondary)]">Engineering Student | Data Science & ML Enthusiast</p>
+        
+            <!-- Interactive Terminal Section -->
+            <div id="interactive-terminal" class="mt-12">
+                 <div id="initial-prompt" class="mb-2"></div>
+                 <div id="terminal-output" class="mb-4"></div>                
+                 <div class="flex items-center border border-[var(--secondary-color)] rounded-md p-2">
+                    <span class="text-[var(--terminal-green)] mr-2">$</span>
+                    <input type="text" id="command-input" class="flex-1 bg-transparent border-none focus:outline-none text-[var(--text-primary)]" autocomplete="off" disabled/>
+                    <div class="cursor"></div>
+                </div>
+            </div>
+            
+            <section class="mt-24" id="about">
+                <div class="flex items-center mb-6">
+                    <span class="text-[var(--terminal-green)] mr-2">$</span>
+                    <p class="flex-1 outline-none bg-transparent">./about.sh</p>
+                </div>
+                <div class="pl-4 border-l-2 border-[var(--secondary-color)]">
+                    <p class="text-[var(--text-primary)]"> An engineering student seeking opportunities in data science and business intelligence. I am proficient in Python and SQL, with experience in data visualization using Power BI, evaluating machine learning models, and building data processing workflows. </p>
+                </div>
+            </section>
+
+            <section class="mt-24" id="experience">
+                <div class="flex items-center mb-6">
+                    <span class="text-[var(--terminal-green)] mr-2">$</span>
+                    <p class="flex-1 outline-none bg-transparent">./experience.sh</p>
+                </div>
+                <div class="space-y-8 pl-4 border-l-2 border-[var(--secondary-color)]">
+                    <div>
+                        <p class="text-[var(--terminal-yellow)]">Data Science Intern @ Personate.ai (Feb 2024 - May 2024)</p>
+                        <ul class="list-disc list-inside text-[var(--text-secondary)] mt-2 pl-4 space-y-1">
+                            <li>Benchmarked LLMs (e.g., GPT, BERT) to guide model selection based on performance and efficiency.</li>
+                            <li>Implemented LSB-based video steganography to embed hidden data while preserving video quality.</li>
+                            <li>Used Google Colab and AWS for scalable data processing and model deployment.</li>
+                            <li>Developed an efficient data loader for the Wav2Lip model to enhance training performance.</li>
+                            <li>Used the MARLIN model for multi-modal feature extraction to improve video content analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-24" id="projects">
+                <div class="flex items-center mb-6">
+                    <span class="text-[var(--terminal-green)] mr-2">$</span>
+                    <p class="flex-1 outline-none bg-transparent">ls -l ./projects</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Updated card hover effect: border color change -->
+                    <div class="border border-[var(--secondary-color)] rounded-sm p-4 flex flex-col justify-between bg-[var(--background-color)] hover:border-[var(--accent-color)] transition-colors duration-300">
+                        <div>
+                            <div class="aspect-video bg-[var(--secondary-color)] mb-4 rounded-sm overflow-hidden"><img alt="Weather App Preview" class="w-full h-full object-cover" src="media\fingertip.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/282c34/abb2bf?text=Image+Not+Found';"></div>
+                            <h3 class="text-[var(--accent-color)] font-bold text-lg">React-Based Weather App</h3>
+                            <p class="text-[var(--text-secondary)] mt-2">A weather dashboard that provides current weather information and forecasts for different cities using React, Vite, and the OpenWeatherMap API.</p>
+                        </div>
+                        <a href="https://react-weather-app-iota-wheat.vercel.app/" target="_blank" class="mt-4 w-full bg-transparent border border-[var(--text-secondary)] text-[var(--text-secondary)] px-4 py-2 rounded-sm text-center text-sm font-normal hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary)] hover:border-[var(--accent-color)] transition-all duration-300">View Project</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-24" id="skills">
+                <div class="flex items-center mb-6">
+                    <span class="text-[var(--terminal-green)] mr-2">$</span>
+                    <p class="flex-1 outline-none bg-transparent">./skills.sh</p>
+                </div>
+                <div class="pl-4 border-l-2 border-[var(--secondary-color)] space-y-1">
+                    <p><span class='text-[var(--terminal-yellow)]'>Languages:</span> Python, C++, SQL, Bash</p>
+                    <p><span class='text-[var(--terminal-yellow)]'>Frameworks:</span> Django, Flask, Node.js</p>
+                    <p><span class='text-[var(--terminal-yellow)]'>Libraries:</span> TensorFlow, PyTorch, Scikit-learn, NumPy, Pandas, Matplotlib</p>
+                    <p><span class='text-[var(--terminal-yellow)]'>Tools:</span> Kubernetes, Docker, GIT, MySQL</p>
+                    <p><span class='text-[var(--terminal-yellow)]'>Platforms:</span> Linux, AWS, GCP</p>
+                </div>
+            </section>
+
+            <section class="mt-24" id="contact">
+                <div class="flex items-center mb-6">
+                    <span class="text-[var(--terminal-green)] mr-2">$</span>
+                    <p class="flex-1 outline-none bg-transparent">./contact.sh</p>
+                </div>
+                <div class="pl-4 border-l-2 border-[var(--secondary-color)]">
+                    <p class="text-[var(--text-primary)] mb-4">Let's connect! Feel free to reach out.</p>
+                    <div class="flex gap-4">
+                        <a class="text-[var(--accent-color)] hover:underline" href="mailto:divyanshgupta2003@gmail.com">email</a>
+                        <a class="text-[var(--accent-color)] hover:underline" href="https://www.linkedin.com/in/divyanshgupta21" target="_blank">linkedin</a>
+                        <a class="text-[var(--accent-color)] hover:underline" href="https://github.com/divyanshg21" target="_blank">github</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="mt-24 text-center text-[var(--text-secondary)] text-sm">
+            <p>
+                <span class="text-[var(--terminal-yellow)]">exit status 0</span> | Designed & Built by Divyansh Gupta
+            </p>
+        </footer>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

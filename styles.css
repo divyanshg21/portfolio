@@ -1,0 +1,67 @@
+        :root {
+            --primary-color: #1978e5;
+            --secondary-color: #282c34;
+            --background-color: #1e1e1e;
+            --text-primary: #abb2bf;
+            --text-secondary: #5c6370;
+            --accent-color: #61afef;
+            --terminal-green: #98c379;
+            --terminal-yellow: #e5c07b;
+            --terminal-red: #e06c75;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        /* Blinking cursor effect */
+        .cursor {
+            display: inline-block;
+            width: 0.5em;
+            height: 1.1em;
+            background-color: var(--accent-color);
+            animation: blink 1s step-end infinite;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+        @keyframes blink {
+            from, to { background-color: transparent }
+            50% { background-color: var(--accent-color); }
+        }
+        /* Styles for the terminal output area animation */
+        #terminal-output {
+            max-height: 0;
+            opacity: 0;
+            overflow-y: auto;
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        #terminal-output.active {
+            max-height: 12rem; /* h-48 */
+            opacity: 1;
+        }
+        /* Custom scrollbar styles for the terminal */
+        #terminal-output::-webkit-scrollbar {
+            width: 8px;
+        }
+        #terminal-output::-webkit-scrollbar-track {
+            background: var(--secondary-color);
+            border-radius: 10px;
+        }
+        #terminal-output::-webkit-scrollbar-thumb {
+            background-color: var(--text-secondary);
+            border-radius: 10px;
+            border: 2px solid var(--secondary-color);
+        }
+        #terminal-output::-webkit-scrollbar-thumb:hover {
+            background-color: var(--text-primary);
+        }
