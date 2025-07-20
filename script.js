@@ -140,4 +140,22 @@
         }
 
         startSequence();
+
+        // --- Email link copy-to-clipboard ---
+        const emailLink = document.getElementById('email-link');
+        if (emailLink) {
+            emailLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                const email = 'divyanshgupta2003@gmail.com';
+                navigator.clipboard.writeText(email).then(() => {
+                    const originalText = emailLink.textContent;
+                    emailLink.textContent = 'Copied!';
+                    setTimeout(() => {
+                        emailLink.textContent = originalText;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy email: ', err);
+                });
+            });
+        }
     });
